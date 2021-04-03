@@ -26,6 +26,9 @@ class CreateUsersTable extends Migration
             ->onUpdate('cascade');
 
             $table->string('v_e', 1);
+
+            $table->string('api_toker')->unique()->nullable();
+            $table->rememberToken();
             $table->timestamps();
         });
     }
