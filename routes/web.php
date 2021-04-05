@@ -2,6 +2,8 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Http\Controllers\usersController;
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -21,3 +23,15 @@ $router->get('/key',function(){
     return \illuminate\Support\Str::random(32) ;
     echo "Hola Mundo";
 });
+
+$router->post('login', 'loginController@login');
+$router->post('register', 'registerController@register');
+
+$router->group(['middleware' => 'auth'], function() use ($router){
+  
+    // aqui van todas las rutas que se necesitar estar autenticado para el acceso
+    $router->post('logout', 'loginController@logout');
+  
+  });
+
+//$router->post('users', 'usersController@UserInsert');

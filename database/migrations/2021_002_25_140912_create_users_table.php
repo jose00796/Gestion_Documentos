@@ -14,10 +14,11 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) { 
+            $table->id();
             $table->string('user_name', 255);
             $table->string('password', 255);
-            $table->integer('ced')->primary();
-            $table->unsignedBigInteger('id_rol')->unique();
+            $table->integer('ced');
+            $table->unsignedBigInteger('id_rol');
 
             $table->foreign('id_rol')
             ->references('id')
@@ -27,7 +28,7 @@ class CreateUsersTable extends Migration
 
             $table->string('v_e', 1);
 
-            $table->string('api_toker')->unique()->nullable();
+            $table->string('api_token')->unique()->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
