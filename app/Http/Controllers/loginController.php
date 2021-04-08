@@ -49,7 +49,7 @@ class loginController extends Controller
 
     public function logout(Request $request)
     {
-        User::where('apí_token', $request->input('api_token'))->update(['api_token' => null]);
+        User::where('api_token', $request->input('api_token'))->update(['api_token' => null]);
         return response()->json(['status' => 'success']);
     }
 }

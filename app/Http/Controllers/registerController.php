@@ -21,7 +21,6 @@ class registerController extends Controller
 
         //Validamos los datos
         $this->validate($request, [
-            'id' => 'required',
             'user_name' => 'required',
             'password' => 'required',
             'ced' => 'required',
@@ -35,6 +34,10 @@ class registerController extends Controller
         //creamos un nuevo Usuario
         $user = User::create($data);
         return response()->json(['status' => 'success', 'data' => $user]);
+
+        
+        
+        // CODIGO ALTERNATIVO TAMBIEN FUNCIONA LOCO...
 
        /* $data = new User();
 

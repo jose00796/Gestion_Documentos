@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use app\Models\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Crypt;
@@ -14,6 +14,13 @@ class usersController extends Controller
      *
      * @return void
      */
+
+    public function consulta()
+    {
+        $user = User::all();
+        return response()->json($user);
+    }
+
 
      /*-------------------Por Si Acaso:-----------------
 

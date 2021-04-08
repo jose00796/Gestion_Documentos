@@ -26,6 +26,7 @@ $router->get('/key',function(){
 
 $router->post('login', 'loginController@login');
 $router->post('register', 'registerController@register');
+$router->get('/user', 'usersController@consulta');
 
 $router->group(['middleware' => 'auth'], function() use ($router){
   
