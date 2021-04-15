@@ -19,7 +19,8 @@ class documents extends Model implements AuthenticatableContract, AuthorizableCo
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'comication_number', 'entry_number', 'enter_date', 'comunication_date', 'annexed', 
+        'subject', 'cod_reason', 'observation', 'id_status', 'id_answer', 'id_folder', 'id_source'
     ];
 
     /**

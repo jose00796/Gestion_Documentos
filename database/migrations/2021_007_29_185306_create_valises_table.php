@@ -15,7 +15,6 @@ class CreateValisesTable extends Migration
     {
         Schema::create('valises', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_folder')->unique();
             $table->string('valise_name', 255);
             $table->unsignedBigInteger('id_valise_type');
             $table->unsignedBigInteger('id_location');

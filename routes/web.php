@@ -2,6 +2,7 @@
 
 /** @var \Laravel\Lumen\Routing\Router $router */
 
+use App\Http\Controllers\documentsController;
 use App\Http\Controllers\usersController;
 
 /*
@@ -24,9 +25,14 @@ $router->get('/key',function(){
     echo "Hola Mundo";
 });
 
+//LOGIN...
 $router->post('login', 'loginController@login');
 $router->post('register', 'registerController@register');
 $router->get('/user', 'usersController@consulta');
+
+//DOCUMENTOS...
+$router->get('document', 'documentsController@consulta');
+$router->post('document', 'documentsController@guardar');
 
 $router->group(['middleware' => 'auth'], function() use ($router){
   

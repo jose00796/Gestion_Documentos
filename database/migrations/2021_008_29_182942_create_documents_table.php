@@ -17,8 +17,8 @@ class CreateDocumentsTable extends Migration
             $table->id();
             $table->integer('comunication_number');
             $table->integer('entry_number');
-            $table->string('enter_date', 8);
-            $table->string('comunication_date');
+            $table->date('enter_date');
+            $table->date('comunication_date');
             $table->string('annexed', 255);
             $table->string('subject', 255);
             $table->unsignedBigInteger('cod_reason');

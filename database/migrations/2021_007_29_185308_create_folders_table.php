@@ -18,10 +18,11 @@ class CreateFoldersTable extends Migration
             $table->string('folder_name', 255);
             $table->unsignedBigInteger('id_type_folder');
             $table->unsignedBigInteger('id_source');
-            $table->string('creation_date', 255);
+            $table->date('creation_date');
             $table->unsignedBigInteger('id_status_folder');
             $table->unsignedBigInteger('id_detail_ubic');
-            $table->unsignedBigInteger('id_valise');
+            $table->unsignedBigInteger('id_valise')->nullable();
+            $table->unsignedBigInteger('id_status');
 
             $table->foreign('id_source')
             ->references('id')
