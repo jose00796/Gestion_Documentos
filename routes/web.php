@@ -34,6 +34,14 @@ $router->get('/user', 'usersController@consulta');
 $router->get('document', 'documentsController@consulta');
 $router->post('document', 'documentsController@guardar');
 
+//CARPETAS... 
+$router->get('folder', 'foldersController@consulta');
+$router->post('folder', 'foldersController@guardar');
+
+//VALIJAS...
+$router->get('valise', 'valisesController@consulta');
+$router->post('valise', 'valisesController@guardar');
+
 $router->group(['middleware' => 'auth'], function() use ($router){
   
     // aqui van todas las rutas que se necesitar estar autenticado para el acceso
