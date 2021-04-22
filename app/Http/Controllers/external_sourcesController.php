@@ -18,6 +18,14 @@ class external_sourcesController extends Controller
         return response()->json($dataSource);
     }
 
+    public function ver($id)
+    {
+        $dataSource = new external_sources();
+        $datosEncontrados = $dataSource->find($id);
+
+        return response()->json("$datosEncontrados");
+    }
+
     public function guardar(Request $request)
     {
         $dataSource = new external_sources();

@@ -18,6 +18,14 @@ class foldersController extends Controller
         return response()->json($data);
     }
 
+    public function ver($id)
+    {
+        $dataFolders = new folders();
+        $datosEncontrados = $dataFolders->find($id);
+
+        return response()->json("$datosEncontrados");
+    }
+
     //INSERTAR NUEVO REGISTRO...
     public function guardar(Request $request)
     {

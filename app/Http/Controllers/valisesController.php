@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\valises;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,14 @@ class valisesController extends Controller
         $data = valises::all();
 
         return response()->json($data);
+    }
+
+    public function ver($id)
+    {
+        $dataValises = new valises();
+        $datosEncontrados = $dataValises->find($id);
+
+        return response()->json("$datosEncontrados");
     }
 
     //INSERTAR NUEVO REGISTRO...
