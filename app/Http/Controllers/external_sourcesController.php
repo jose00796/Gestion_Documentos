@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\external_sources;
+use Illuminate\Http\Request;
 
 class external_sourcesController extends Controller
 {
@@ -10,9 +11,42 @@ class external_sourcesController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function consulta()
     {
-        //
+        $dataSource = external_sources::all();
+
+        return response()->json($dataSource);
+    }
+
+    public function guardar(Request $request)
+    {
+        $dataSource = new external_sources();
+
+        $dataSource->entity = $request->entity;
+
+        $dataSource->save();
+        
+        return response()->json($dataSource);
+    }
+
+    public function eliminar($id)
+    {
+        $dataSource = external_sources::find($id);
+
+        $dataSource->delete();
+
+        return response()->json("Registro Borrado");
+    }
+
+    public function actualizar(Request $request, $id)
+    {
+        $dataSource = external_sources::findOrFail($id);
+
+        $dataSource->entity = $request->entity;
+
+        $dataSource->save();
+
+        return response()->json('Registro Actualizado');
     }
 
     //

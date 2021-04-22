@@ -16,7 +16,6 @@ class CreateExternalSourcesTable extends Migration
         Schema::create('external_sources', function (Blueprint $table) {
             $table->id();
             $table->string('entity', 255);
-            $table->string('entity_type', 255);
             $table->timestamps();
         });
     }
