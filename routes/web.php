@@ -22,7 +22,6 @@ $router->get('/', function () use ($router) {
 
 $router->get('/key',function(){
     return \illuminate\Support\Str::random(32) ;
-    echo "Hola Mundo";
 });
 
 //LOGIN...
@@ -41,6 +40,16 @@ $router->post('folder', 'foldersController@guardar');
 //VALIJAS...
 $router->get('valise', 'valisesController@consulta');
 $router->post('valise', 'valisesController@guardar');
+
+//ELIMINAR REGISTROS...
+$router->delete('document/{id}', 'documentsController@eliminar');
+$router->delete('folder/{id}', 'foldersController@eliminar');
+$router->delete('valise/{id}', 'valisesController@eliminar');
+
+//ACTUALIZAR REGISTRO... 
+$router->put('actualizar-document/{id}', 'documentsController@actualizar');
+$router->put('actualizar-folder/{id}', 'foldersController@actualizar');
+$router->put('actualizar-valise/{id}', 'valisesController@actualizar');
 
 $router->group(['middleware' => 'auth'], function() use ($router){
   

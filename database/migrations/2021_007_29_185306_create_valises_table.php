@@ -18,7 +18,7 @@ class CreateValisesTable extends Migration
             $table->string('valise_name', 255);
             $table->unsignedBigInteger('id_valise_type');
             $table->unsignedBigInteger('id_location');
-            $table->string('creation_date', 8);
+            $table->date('creation_date');
             $table->unsignedBigInteger('id_detail_ubic');
 
             $table->foreign('id_valise_type')

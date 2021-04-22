@@ -19,7 +19,8 @@ class folders extends Model implements AuthenticatableContract, AuthorizableCont
      * @var array
      */
     protected $fillable = [
-        'name', 'email',
+        'folder_name', 'id_type_folder', 'id_source', 'creation_date', 'id_status_folder',
+        'id_detail_ubic', 'id_valise'
     ];
 
     /**
