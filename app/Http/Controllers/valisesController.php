@@ -32,6 +32,15 @@ class valisesController extends Controller
     {
         $dataValises = new valises();
 
+        $this->validate($request,[
+            'valise_name' => 'required',
+            'id_valise_type' => 'required',
+            'id_location' => 'required',
+            'creation_date' => 'required',
+            'id_detail_ubic' => 'required',
+            'id_status' => 'required'
+        ]);
+
         $dataValises->valise_name = $request->valise_name;
         $dataValises->id_valise_type = $request->id_valise_type;
         $dataValises->id_location = $request->id_location;

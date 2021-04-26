@@ -33,9 +33,7 @@ class registerController extends Controller
 
         //creamos un nuevo Usuario
         $user = User::create($data);
-        return response()->json(['status' => 'success', 'data' => $user]);
-
-        
+        return response()->json(['status' => 'success', 'data' => $user]);   
         
         // CODIGO ALTERNATIVO TAMBIEN FUNCIONA LOCO...
 

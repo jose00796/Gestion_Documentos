@@ -30,6 +30,11 @@ class external_sourcesController extends Controller
     {
         $dataSource = new external_sources();
 
+        $this->validate($request,[
+            'entity' => 'required'
+
+        ]);
+
         $dataSource->entity = $request->entity;
 
         $dataSource->save();

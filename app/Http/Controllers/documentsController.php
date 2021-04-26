@@ -30,6 +30,21 @@ class documentsController extends Controller
     {
         $dataDocuments = new documents();
 
+        $this->validate($request,[
+            'comunication_number' => 'required',
+            'entry_number' => 'required',
+            'enter_date' => 'required',
+            'comunication_date' => 'required',
+            'annexed' => 'required',
+            'subject' => 'required',
+            'cod_reason' => 'required',
+            'observation' => 'required',
+            'id_status' => 'required',
+            'id_answer' => 'required',
+            'id_folder' => 'required',
+            'id_souce' => 'required'
+        ]);
+
         $dataDocuments->comunication_number = $request->comunication_number;
         $dataDocuments->entry_number = $request->entry_number;
         $dataDocuments->enter_date = $request->enter_date;

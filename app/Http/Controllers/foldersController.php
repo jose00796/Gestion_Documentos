@@ -31,6 +31,16 @@ class foldersController extends Controller
     {
         $dataFolders = new folders();
 
+        $this->validate($request,[
+            'folder_name' => 'required',
+            'id_type_folder' => 'required',
+            'id_source' => 'required',
+            'creation_date' => 'required',
+            'id_status_folder' => 'required',
+            'id_detail_ubic' => 'required',
+            'id_valise' => 'required'
+        ]);
+
         $dataFolders->folder_name = $request->folder_name;
         $dataFolders->id_type_folder = $request->id_type_folder;
         $dataFolders->id_source = $request->id_source;
