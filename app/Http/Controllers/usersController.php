@@ -21,6 +21,35 @@ class usersController extends Controller
         return response()->json($user);
     }
 
+    public function ver($id)
+    {
+        $dataUsers = new User();
+        $dataUsersEncontrados = $dataUsers->find($id);
+
+        return response($dataUsersEncontrados);
+    }
+
+    public function eliminar($id)
+    {
+        $dataUsers = User::find($id);
+
+        $dataUsers->delete();
+
+        return response()->json("Usuario Borrado");
+    }
+
+    public function actualizar(Request $request, $id)
+    {
+        $dataUsers = User::findOrFail($id);
+        
+        $dataUsers->user_name = $request->user_name;
+        $dataUsers->password = $request->password;
+
+        $dataUsers->save();
+
+        return response()->json("Usuario Actualizado");
+    }
+
 
      /*-------------------Por Si Acaso:-----------------
 

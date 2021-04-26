@@ -28,6 +28,9 @@ $router->get('/key',function(){
 $router->post('login', 'loginController@login');
 $router->post('register', 'registerController@register');
 $router->get('/user', 'usersController@consulta');
+$router->get('buscar/{id}', 'usersController@ver');
+$router->delete('eliminar-usuario/{id}', 'usersController@eliminar');
+$router->put('actualizar-usuario/{id}', 'usersController@actualizar');
 
 //DOCUMENTOS...
 $router->get('document', 'documentsController@consulta');
