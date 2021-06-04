@@ -18,7 +18,7 @@ class valisesController extends Controller
 
         return response()->json($data);
     }
-
+    
     public function ver($id)
     {
         $dataValises = new valises();

@@ -28,34 +28,34 @@ $router->get('/key',function(){
 $router->post('login', 'loginController@login');
 $router->post('register', 'registerController@register');
 $router->get('/user', 'usersController@consulta');
-$router->get('buscar/{id}', 'usersController@ver');
+$router->get('buscar-usuario/{id}', 'usersController@ver');
 $router->delete('eliminar-usuario/{id}', 'usersController@eliminar');
 $router->put('actualizar-usuario/{id}', 'usersController@actualizar');
 
 //DOCUMENTOS...
 $router->get('document', 'documentsController@consulta');
-$router->get('document/{id}', 'documentsController@ver');
+$router->get('buscar-document/{id}', 'documentsController@ver');
 $router->post('insertar-document', 'documentsController@guardar');
 $router->delete('eliminar-document/{id}', 'documentsController@eliminar');
 $router->put('actualizar-document/{id}', 'documentsController@actualizar');
 
 //CARPETAS... 
 $router->get('folder', 'foldersController@consulta');
-$router->get('folder/{id}', 'foldersController@ver');
+$router->get('buscar-folder/{id}', 'foldersController@ver');
 $router->post('insertar-folder', 'foldersController@guardar');
 $router->delete('eliminar-folder/{id}', 'foldersController@eliminar');
 $router->put('actualizar-folder/{id}', 'foldersController@actualizar');
 
 //VALIJAS...
 $router->get('valise', 'valisesController@consulta');
-$router->get('valise/{id}', 'valisesController@ver');
+$router->get('buscar-valise/{id}', 'valisesController@ver');
 $router->post('insertar-valise', 'valisesController@guardar');
 $router->delete('eliminar-valise/{id}', 'valisesController@eliminar');
 $router->put('actualizar-valise/{id}', 'valisesController@actualizar');
 
 //FUENTE_EXTERNA
 $router->get('external_source', 'external_sourcesController@consulta');
-$router->get('external_source/{id}', 'external_sourcesController@ver');
+$router->get('buscar-external_source/{id}', 'external_sourcesController@ver');
 $router->post('insertar-external_source', 'external_sourcesController@guardar');
 $router->delete('eliminar-external_source/{id}', 'external_sourcesController@eliminar');
 $router->put('actualizar-external_source/{id}', 'external_sourcesController@actualizar');
