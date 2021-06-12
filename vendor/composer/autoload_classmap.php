@@ -45,6 +45,7 @@ return array(
     'App\\Models\\role_actions' => $baseDir . '/app/Models/role_actions.php',
     'App\\Models\\roles' => $baseDir . '/app/Models/roles.php',
     'App\\Models\\status_documents' => $baseDir . '/app/Models/status_documents.php',
+    'App\\Models\\tracing' => $baseDir . '/app/Models/tracing.php',
     'App\\Models\\ubications' => $baseDir . '/app/Models/ubications.php',
     'App\\Models\\valise_types' => $baseDir . '/app/Models/valise_types.php',
     'App\\Models\\valises' => $baseDir . '/app/Models/valises.php',

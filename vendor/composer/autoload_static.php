@@ -526,6 +526,7 @@ class ComposerStaticInit7b15089b39571f49483bd39ad6b6d172
         'App\\Models\\role_actions' => __DIR__ . '/../..' . '/app/Models/role_actions.php',
         'App\\Models\\roles' => __DIR__ . '/../..' . '/app/Models/roles.php',
         'App\\Models\\status_documents' => __DIR__ . '/../..' . '/app/Models/status_documents.php',
+        'App\\Models\\tracing' => __DIR__ . '/../..' . '/app/Models/tracing.php',
         'App\\Models\\ubications' => __DIR__ . '/../..' . '/app/Models/ubications.php',
         'App\\Models\\valise_types' => __DIR__ . '/../..' . '/app/Models/valise_types.php',
         'App\\Models\\valises' => __DIR__ . '/../..' . '/app/Models/valises.php',

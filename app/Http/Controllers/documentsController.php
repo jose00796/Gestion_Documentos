@@ -42,7 +42,7 @@ class documentsController extends Controller
             'id_status' => 'required',
             'id_answer' => 'required',
             'id_folder' => 'required',
-            'id_souce' => 'required'
+            'id_source' => 'required'
         ]);
 
         $dataDocuments->comunication_number = $request->comunication_number;
